@@ -1,0 +1,35 @@
+{
+  "name": "priority-blocking-queue",
+  "version": "1.0.0",
+  "description": "A simple blocking (asynchronous) priority queue (sorted, not FIFO).",
+  "main": "src/priority-blocking-queue.js",
+  "scripts": {
+    "lint": "eslint . || exit 0",
+    "test": "npm lint; mocha ./test/setup.js ./test --recursive -R spec || exit 0"
+  },
+  "keywords": [
+    "blocking queue",
+    "queue",
+    "priority queue",
+    "priority blocking queue",
+    "blocking priority queue",
+    "asynchronous queue",
+    "asynchronous"
+  ],
+  "author": "Kevin Massaroni <kevinmassaroni@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "priorityqueue": "^0.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/massaroni/priority-blocking-queue.git"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.19.0",
+    "mocha": "^5.2.0",
+    "sinon": "^2.3.2",
+    "sinon-chai": "^2.10.0"
+  }
+}
