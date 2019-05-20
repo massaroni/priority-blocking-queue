@@ -1,6 +1,6 @@
 {
   "name": "priority-blocking-queue",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple blocking (asynchronous) priority queue (sorted, not FIFO).",
   "main": "src/priority-blocking-queue.js",
   "scripts": {

@@ -13,7 +13,7 @@ npm install --save priority-blocking-queue
 Add items to the queue and then remove them in sorted order.
 ```javascript
 const PriorityBlockingQueue = require('priority-blocking-queue');
-let queue = new PriorityBlockingQueue();
+let queue = new PriorityBlockingQueue((lhs, rhs) => lhs.p - rhs.p);
 queue.put({p:2}).put({p:3}, {p:1});
 
 let a = await queue.take();
@@ -32,7 +32,7 @@ console.log(c.p);
 Wait for an item to become available.
 ```javascript
 const PriorityBlockingQueue = require('priority-blocking-queue');
-let queue = new PriorityBlockingQueue();
+let queue = new PriorityBlockingQueue((lhs, rhs) => lhs.p - rhs.p);
 queue.take().then((item) => console.log('taker 1 got ', item.p));
 queue.take().then((item) => console.log('taker 2 got ', item.p));
 
